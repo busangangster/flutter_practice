@@ -1,3 +1,4 @@
+import 'package:book/Animation/hero.dart';
 import 'package:book/date_picker.dart';
 import 'package:book/time_picker.dart';
 import 'package:flutter/cupertino.dart';
@@ -39,8 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
           child: ElevatedButton(
             child: Text('Open route'),
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => timepicker()));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => HeroPage()));
             },
           ),
         ));
