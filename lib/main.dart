@@ -1,11 +1,6 @@
-import 'package:book/Animation/hero.dart';
-import 'package:book/date_picker.dart';
-import 'package:book/time_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'Animation/animated_container.dart';
-import 'Animation/sliver_appBar.dart';
+import 'Animation/sliver_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -44,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Text('Open route'),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SliverPage()));
+                  MaterialPageRoute(builder: (context) => SliverListPage()));
             },
           ),
         ));
