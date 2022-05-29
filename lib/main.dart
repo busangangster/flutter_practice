@@ -1,4 +1,4 @@
-import 'package:book/time_picker.dart';
+import 'package:book/date_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('gang'),
+          title: Text('Main'),
         ),
         body: Center(
           child: ElevatedButton(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class datepicker extends StatefulWidget {
   const datepicker({Key? key}) : super(key: key);
@@ -9,7 +8,7 @@ class datepicker extends StatefulWidget {
 }
 
 class _datepickerState extends State<datepicker> {
-  DateTime _selectedTime = DateTime.now();
+  DateTime _selectedTime = DateTime.now(); // Initialize DateTime
 
   @override
   Widget build(BuildContext context) {
@@ -19,31 +18,32 @@ class _datepickerState extends State<datepicker> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center, // Align center
           children: [
             ElevatedButton(
-              onPressed: () async {
+              onPressed: () {
                 Future<DateTime?> selectedDate = showDatePicker(
                   context: context,
-                  initialDate: DateTime.now(),
-                  firstDate: DateTime(2022),
-                  lastDate: DateTime(2030),
+                  initialDate: DateTime.now(), // set initial date
+                  firstDate: DateTime(2022), // set first date
+                  lastDate: DateTime(2030), // set last date
                   builder: (BuildContext context, Widget? child) {
                     return Theme(
-                      data: ThemeData.dark(),
+                      data: ThemeData.dark(), // Dark mode
                       child: child!,
                     );
                   },
                 );
                 selectedDate.then((dateTime) {
                   setState(() {
-                    _selectedTime = dateTime!;
+                    _selectedTime =
+                        dateTime!; // renew _selectedTime by using setState function
                   });
                 });
               },
               child: Text('Date Picker'),
             ),
-            Text('$_selectedTime'),
+            Text('$_selectedTime'), // show the selectedTime
           ],
         ),
       ),
