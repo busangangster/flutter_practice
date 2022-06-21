@@ -1,11 +1,15 @@
 import 'package:book/Easy_Ui/Easy_ui.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'BMI/BMI_main.dart';
 import 'Stopwatch/Stopwatch.dart';
+import 'Todo/Todo.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -40,8 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
           child: ElevatedButton(
             child: Text('Open route'),
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Stopwatch()));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => TodoList()));
             },
           ),
         ));

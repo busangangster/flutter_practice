@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "377495337375",
+    "project_id": "todo-practice-4f76b",
+    "storage_bucket": "todo-practice-4f76b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377495337375:android:72065b93a5d7d780b4a5aa",
+        "android_client_info": {
+          "package_name": "com.example.book"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "377495337375-vindj53407otle95jvhm1pd9davahs0r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4u7HnBELRFtLZuXIRLfneSER1L4cMAtE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "377495337375-vindj53407otle95jvhm1pd9davahs0r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
