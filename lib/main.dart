@@ -1,7 +1,7 @@
 import 'package:book/Easy_Ui/Easy_ui.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'Animation/sliver_list.dart';
+import 'BMI/BMI_main.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Text('Open route'),
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => EasyUi()));
+                  context, MaterialPageRoute(builder: (context) => BmiMain()));
             },
           ),
         ));

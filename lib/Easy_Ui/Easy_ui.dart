@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'Page1.dart';
+import 'Page2.dart';
+import 'Page3.dart';
 
 class EasyUi extends StatefulWidget {
   const EasyUi({Key? key}) : super(key: key);
@@ -9,6 +12,11 @@ class EasyUi extends StatefulWidget {
 
 class _EasyUiState extends State<EasyUi> {
   var _index = 0;
+  var _pages = [
+    Page1(),
+    Page2(),
+    Page3(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +34,7 @@ class _EasyUiState extends State<EasyUi> {
         ],
         centerTitle: true,
       ),
-      body: Center(
-        child: Text(
-          '$_index 페이지',
-          style: TextStyle(fontSize: 40),
-        ),
-      ),
+      body: _pages[_index],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
           setState(() {
